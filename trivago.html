@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="trivago.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Trivago</title>
+</head>
+
+<body>
+    <div class="main">
+        <div class="wrapper p-3" id="search-elements">
+            <div class="" id="search-box">
+                <form action="" autocomplete="on">
+                    <input class="over-inpt sfont" type="text" id="search-input" placeholder="Town, City, Area etc" />
+                    <button class="over-btn text-white" type="submit" id="search-button">Search</button>
+                </form>
+            </div>
+
+            <div class="" id="booking-boxes">
+                <div class="row">
+                    <div class="col-4 float-left">
+                        <input class="box-inpt sfont" onclick="this.type='date'" id="check-in"
+                            placeholder="&#xf073; Check-in &#xf053; &#xf054" />
+                    </div>
+                    <div class="col-4">
+                        <input class="box-inpt sfont" onclick="this.type='date'" id="check-out"
+                            placeholder="&#xf073; Check-out &#xf053; &#xf054" />
+                    </div>
+                    <div class="col-4 float-right">
+                        <label for="room-size">Choose room size:</label>
+                        <select class="float-left sfont sideside text-white" id="room-size">
+                            <option class="text-white">Single</option>
+                            <option class="text-white">Double</option>
+                            <option class="text-white" selected>Family rooms</option>
+                        </select>
+                    </div>
+                </div>     
+
+                <div class="row mt-2">                   
+                    <div class="col-4 float-left d-flex justify-content-center mt-2">
+                        <div class="w-100">
+                            <label class="float-left text-white">Price</label>
+                            <span class="float-right text-white" id="max-price">€</span>
+                            <label class="float-right text-white font-weight-bold ml-2 valueSpan2"></label>
+                            <label class="float-right text-white">max:</label>
+                            <input type="range" class="custom-range" id="price-range"
+                                onchange="filterHotelsByPrice()" />
+                        </div>
+                    </div>
+                    
+                    <div class="col-4 mt-2">
+                        <div class="form-group">
+                            <label for="property-type">Property Type</label>
+                            <select class="float-left sfont sideside text-white" id="property-type">
+                                <option>All</option>
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="ratings">Guest rating</label>
+                            <select class="float-right sfont sideside text-white" id="ratings">
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="col-4 float-right mt-2">
+                        <label for="location">Hotel location</label>
+                        <select class="float-right sfont sideside text-white ratings" id="location"></select>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-fluid">
+            <div class="row mt-2">
+                <div class="col-2 img"><button class = "btn btn-default bg-white mt-3" id="myBtn">View Map</button></div>
+                
+                <div id="myModal" class="modal">                   
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <div  id="map"></div>
+                    </div>
+                </div>
+
+                <div class="col-5">
+                    <span class=""><b>Short by</b></span>
+                    <select class="side" id="sorting"></select>
+                </div>
+            </div>
+        </div>
+
+        <div class="container border border-white" id="results">
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous">
+        </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+    <script src="trivago.js"></script>
+
+</body>
+
+</html>

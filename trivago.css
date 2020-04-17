@@ -1,0 +1,151 @@
+.sideside {
+    background-color: #384c61;
+    border: none;
+    width: 50%;
+    height: 100%
+}
+
+.box-inpt {
+    padding: 10px;
+    font-size: 17px;
+    margin-top: 10px;
+    border: none;
+    float: left;
+    width: 100%;
+    height: 100%;
+    background: white;
+}
+
+#check-in {
+    border-left-style: solid !important;
+    border-left-width: 5px !important;
+    border-left-color: blue !important;
+}
+
+#check-out {
+    border-left-color: darkorange !important;
+    border-left-style: solid !important;
+    border-left-width: 5px !important;
+}
+
+#room-info {
+    border-style: double;
+}
+
+.wrapper {
+    width: 100%;
+    background-color: #384c61;
+}
+
+body {
+    background-color: rgba(245, 244, 244, 0.788);
+}
+
+.sfont {
+    font-family: Arial, FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: inherit;
+}
+
+.img {
+    background-image: url("trivago.png");
+    width: 30%;
+    height: 80px;
+    text-align: center;
+    border-style: solid;
+    border-color: white;
+}
+
+.side {
+    border: none;
+    width: 70%;
+    height: 85%;
+}
+
+.boxed {
+    border: solid;
+    border-color: forestgreen;
+    background-color: forestgreen;
+    width: 30px;
+}
+
+.em {
+    font-size: 18px;
+}
+
+.center {
+    text-align: center;
+}
+
+.big {
+    font-size: 21px;
+    font-weight: bold;
+}
+
+.right {
+    border-right: solid;
+    border-right-width: thin;
+}
+
+.over-inpt {
+    padding: 10px;
+    font-size: 25px;
+    border: none;
+    float: left;
+    width: 80%;
+    background: white;
+}
+
+.over-btn {
+    float: left;
+    width: 20%;
+    padding: 10px;
+    background-color: rgb(36, 77, 131);
+    font-size: 25px;
+    border: none;
+    cursor: pointer;
+}
+
+
+
+.final {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto;
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4); 
+  }
+  
+  .modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; 
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; 
+  }
+  
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
